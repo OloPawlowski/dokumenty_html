@@ -1,0 +1,27 @@
+{
+  "name": "htmldesigners",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OloPawlowski/dokumenty_html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OloPawlowski/dokumenty_html/issues"
+  },
+  "homepage": "https://github.com/OloPawlowski/dokumenty_html#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "pdf-creator-node": "^2.3.4"
+  }
+}
