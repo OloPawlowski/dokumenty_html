@@ -33,6 +33,7 @@ const doc = {
 pdf
   .create(doc, options)
   .then((res) => {
+    console.log("zrobiłem pdf")
     console.log(res);
   })
   .catch((error) => {
