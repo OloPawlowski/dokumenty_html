@@ -4,11 +4,12 @@ const pdf = require('pdf-creator-node');
 const express = require('express');
 const app = express();
 
-const skeleton = fs.readFileSync('./potwierdzenieZ.html', 'utf-8');
+const skeleton = fs.readFileSync('./potwierdzenieO.html', 'utf-8');
 const options = {
   format: 'A4',
   orientation: 'portrait',
-  border: '10mm',
+  margin: '0mm'
+ // border: '10mm',
 //   header: {
 //     height: '45mm',
 //     contents: '<div style="text-align: center;">Author: Ta Lala</div>',
@@ -33,7 +34,6 @@ const doc = {
 pdf
   .create(doc, options)
   .then((res) => {
-    console.log("zrobiłem pdf")
     console.log(res);
   })
   .catch((error) => {
