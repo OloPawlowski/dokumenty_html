@@ -17,29 +17,58 @@
       }
       body {
         background-color: #eaeaea;
-      }
+        margin: 0;
+      }    
       .header {
-        background-color: #1b5e20;
-        padding: 2rem;
+        padding: 6rem 0 0 2rem;
+      }
+      .sub-header {
+        display: block;
+        float: left;
+      }
+      .header img {
+        height: 30px;
+        margin: 3rem 6rem 2rem 4rem;
+      }
+      .header p {
+        font-size: 1.8rem;
+        font-style: oblique;
+        margin: 3rem 2rem 2rem 0;
+      }
+      hr {
+        width: 90%;
+        margin: auto;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #008B3D;
       }
       main {
         font-family: 'Roboto', sans-serif;
         margin: auto;
         width: 100%;
         background-color: white;
+      }      
+      h1 {
+        text-align: center;
+        margin: 6rem 0 9rem 0;
       }
-      section {
-        margin: 5rem;
+      .text {
+        /* width: 60%; */
+        /* margin: auto; */
+        text-align:left;
+        margin: 5rem 5rem 1rem 5rem;
       }
       .note {
         font-size: small;
         background-color: #f0f0f0;
         text-align: center;
         padding: 1rem;
-        margin: 5rem;
+        margin: 5rem 5rem 36rem 5rem;
+      }
+      .logoUE {
+        height: 100px;
       }
       .logoUE img {
-        margin-top: 2rem;
         width: 100%;
         /* display: block;
     margin-left: auto;
@@ -50,15 +79,23 @@
   <body>
     <main>
       <div class="header">
-        <img src="https://euslugi.pzdw.bialystok.pl/assets/logo.png" />
+        <div class="sub-header">
+          <img src="https://euslugi.pzdw.bialystok.pl/assets/logo.png" />
+        </div>
+        <div class="sub-header">
+          <p>Podlaski zarząd dróg w Białymstoku</p>
+        </div>
       </div>
+      <hr>
       <section>
         <h1>Potwierdzenie odebrania dokumentu</h1>
-        <p>Dokument o ID:<span> 378</span> został odebrany</p>
-        <p>Szczegóły:</p>
-        <p>Data i czas: <span>12.07.2022, </span><span>13:45</span></p>
-        <p>Identyfikator dokumentu: <span>378</span></p>
-        <p>Identyfikator powiązanego wniosku <span>246</span></p>
+        <div class="text">
+          <p>Dokument o ID:<span> 378</span> został odebrany</p>
+          <p>Szczegóły:</p>
+          <p>Data i czas: <span>12.07.2022, </span><span>13:45</span></p>
+          <p>Identyfikator dokumentu: <span>378</span></p>
+          <p>Identyfikator powiązanego wniosku <span>246</span></p>
+        </div>
       </section>
       <div class="note">
         <p>
