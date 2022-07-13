@@ -4,11 +4,18 @@ const pdf = require('pdf-creator-node');
 const express = require('express');
 const app = express();
 
+const date = new Date();
+const year = date.getFullYear();
+let month = (date.getMonth() + 1).toString().padStart(2, '0') + '.';
+let day = date.getDate().toString().padStart(2, '0') + '.';
+const dMY = day + month + year;
+
 const skeleton = fs.readFileSync('./potwierdzenieO.html', 'utf-8');
 const options = {
   format: 'A4',
   orientation: 'portrait',
-  margin: '0mm'
+  
+  // margin: '0mm'
  // border: '10mm',
 //   header: {
 //     height: '45mm',
@@ -25,9 +32,13 @@ const options = {
 //     },
 //   },
 };
-
+console.log(dMY);
+console.log(typeof dMY)
 const doc = {
     html: skeleton,
+    data: {
+      date: dMY,
+    },
     path: "./pdfs/newPdf.pdf",
 }
 
