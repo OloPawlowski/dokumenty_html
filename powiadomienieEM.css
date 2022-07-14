@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  width: 96%;
+  background-color: white;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 2rem 1rem 2rem;
+}
+.sub-header {
+  display: block;
+  justify-content: space-around;
+  /* float: left; */
+}
+.sub-header img {
+  height: 2rem;
+}
+.sub-header h1 {
+  font-size: x-large;
+  /* margin-left: 6rem; */
+}
+hr {
+  width: 100%;
+  margin: auto;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #1b5e20;
+}
+section {
+  margin: 2rem;
+}
+.note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-size: small;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+}
+.logoUE img {
+  margin-top: 2rem;
+  width: 100%;
+}
+@media (min-width: 66rem) {
+  main {
+    width: 60%;
+  }
+  .note {
+    margin: 2rem;
+  }
+}

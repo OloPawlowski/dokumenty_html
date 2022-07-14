@@ -4,67 +4,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Potwierdzenie złożenia wniosku</title>
+    <title>Potwierdzenie odebrania dokumentu</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="shortcut icon" href="favicon.png"> -->
-    <!-- <link rel="stylesheet" href="main.css" /> -->
     <style>
-      * {
+     * {
         box-sizing: border-box;
         margin: 0%;
       }
       body {
         background-color: #eaeaea;
-      }
+        margin: 0;
+      }    
       .header {
-        background-color: #1b5e20;
-        padding: 2rem;
+        padding: 6rem 0 0 2rem;
+      }
+      .sub-header {
+        display: block;
+        float: left;
+      }
+      .header img {
+        height: 30px;
+        margin: 3rem 6rem 2rem 4rem;
+      }
+      .header p {
+        font-size: 1.8rem;
+        font-style: oblique;
+        margin: 3rem 2rem 2rem 0;
+      }
+      hr {
+        width: 90%;
+        margin: auto;
+        height: 5px;
+        border-radius: 5px;
+        background-color: #008B3D;
       }
       main {
         font-family: 'Roboto', sans-serif;
         margin: auto;
         width: 100%;
         background-color: white;
+      }      
+      h1 {
+        text-align: center;
+        margin: 6rem 0 5rem 0;
       }
-      section {
-        margin: 5rem;
+      .text {
+        text-align:left;
+        margin: 5rem 5rem 1rem 5rem;
       }
       .note {
         font-size: small;
         background-color: #f0f0f0;
         text-align: center;
         padding: 1rem;
-        margin: 5rem;
+        margin: 5rem 5rem 38rem 5rem;
+      }
+      .logoUE {
+        height: 100px;
+        margin: 0 2rem 0 2rem;
       }
       .logoUE img {
-        margin-top: 2rem;
         width: 100%;
-        /* display: block;
-    margin-left: auto;
-    margin-right: auto      */
       }
     </style>
   </head>
   <body>
     <main>
       <div class="header">
-        <img src="https://euslugi.pzdw.bialystok.pl/assets/logo.png" />
+        <div class="sub-header">
+          <img src="https://euslugi.pzdw.bialystok.pl/assets/logo.png" />
+        </div>
+        <div class="sub-header">
+          <p>Podlaski zarząd dróg w Białymstoku</p>
+        </div>
       </div>
+      <hr>
       <section>
         <h1>Potwierdzenie złożenia wniosku</h1>
-        <p>Wniosek o ID:<b> 123</b> został złożony</p>
-        <p>Szczegóły:</p>
+        <div class="text">
+          <p>Wniosek o ID:<b> {{nr1}}</b> został złożony</p>
+          <p>Szczegóły:</p>
         <p>
           Nadawca dokumentu: Podlaski Zarząd Dróg Wojewódzkich w Białymstoku
         </p>
-        <p>Data wniosku: <b>2022-01-27</b></p>
+        <p>Data wniosku: <b>{{date}}</b></p>
         <p>
-          Data i czas utworzenia potwierdzenia: <b>27.01.2022, </b
-          ><b>00:00:00</b>
+          Data i czas utworzenia potwierdzenia: <b>{{date}}, </b
+          ><b>{{time}}</b>
         </p>
+      </div>
       </section>
       <div class="note">
         <p>

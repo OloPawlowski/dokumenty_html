@@ -8,36 +8,28 @@ const date = new Date();
 const year = date.getFullYear();
 let month = (date.getMonth() + 1).toString().padStart(2, '0') + '.';
 let day = date.getDate().toString().padStart(2, '0') + '.';
+let hour = date.getHours().toString() + ':';
+let minutes = date.getMinutes().toString();
 const dMY = day + month + year;
+const time = hour + minutes;
+let nr1 = Math.floor((Math.random() * 1000));
+let nr2 = Math.floor((Math.random() * 10000));
+let nr3 = Math.floor((Math.random() * 10000));
 
-const skeleton = fs.readFileSync('./potwierdzenieO.html', 'utf-8');
+const skeleton = fs.readFileSync('./potwierdzenieZ.html', 'utf-8');
+
 const options = {
   format: 'A4',
   orientation: 'portrait',
-  
-  // margin: '0mm'
- // border: '10mm',
-//   header: {
-//     height: '45mm',
-//     contents: '<div style="text-align: center;">Author: Ta Lala</div>',
-//   },
-//   footer: {
-//     height: '28mm',
-//     contents: {
-//       first: 'Cover page',
-//       2: 'Second page', // Any page number is working. 1-based index
-//     //   default:
-//     //     '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
-//       last: 'Last Page',
-//     },
-//   },
 };
-console.log(dMY);
-console.log(typeof dMY)
 const doc = {
     html: skeleton,
     data: {
       date: dMY,
+      time: time,
+      nr1: nr1,
+      nr2: nr2,
+      nr3: nr3
     },
     path: "./pdfs/newPdf.pdf",
 }
